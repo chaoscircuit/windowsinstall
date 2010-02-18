@@ -12,6 +12,8 @@ RequestExecutionLevel admin
 !insertmacro MUI_LANGUAGE "English"
 
 Section "ChaosConnect"
+    SectionIn RO
+
     SetShellVarContext all
     # executables
     SetOutPath "$INSTDIR"
@@ -27,6 +29,8 @@ Section "ChaosConnect"
     File drivers\chaos.inf
     File drivers\chaos.cat
     File drivers\chaos_x64.cat
+    File drivers\dpinst.exe
+    File drivers\dpinst_x64.exe
     
     # Add/Remove Programs Entry
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ChaosConnect" \
@@ -37,6 +41,9 @@ Section "ChaosConnect"
                  "Publisher" "Taylor University"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ChaosConnect" \
                  "DisplayIcon" "$\"$INSTDIR\ChaosConnect.exe$\""
+                 
+    # run driver installation
+    Exec "$INSTDIR\driver\dpinst.exe"
                  
 SectionEnd
                  
@@ -60,6 +67,8 @@ Section "Uninstall"
     Delete "$INSTDIR\driver\chaos.inf"
     Delete "$INSTDIR\driver\chaos.cat"
     Delete "$INSTDIR\driver\chaos_x64.cat"
+    Delete "$INSTDIR\driver\dpinst.exe"
+    Delete "$INSTDIR\driver\dpinst_x64.exe"
     Delete "$INSTDIR\driver\*.*"
     
     #start menu shortcuts
