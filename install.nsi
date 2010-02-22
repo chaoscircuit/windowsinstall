@@ -49,6 +49,7 @@ SectionEnd
 Section "Start Menu Shortcuts"
     SetShellVarContext all
     #start menu shortcuts
+    createDirectory "$SMPROGRAMS\ChaosConnect\"
     createShortCut "$SMPROGRAMS\ChaosConnect\ChaosConnect.lnk" "$INSTDIR\ChaosConnect.exe"
 SectionEnd
 
