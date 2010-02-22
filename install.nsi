@@ -1,5 +1,7 @@
 !include MUI.nsh
+
 Name "ChaosConnect"
+
 OutFile "install.exe"
 RequestExecutionLevel admin
 
@@ -42,15 +44,19 @@ Section "ChaosConnect"
     WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\ChaosConnect" \
                  "DisplayIcon" "$\"$INSTDIR\ChaosConnect.exe$\""
                  
-    # run driver installation
-    Exec "$INSTDIR\driver\dpinst.exe"
-                 
 SectionEnd
                  
 Section "Start Menu Shortcuts"
     SetShellVarContext all
     #start menu shortcuts
-    createShortCut "$SMPROGRAMS\ChaosConnect\ChaosConnect.lnk" "$\"$INSTDIR\ChaosConnect.exe$\""
+    createShortCut "$SMPROGRAMS\ChaosConnect\ChaosConnect.lnk" "$INSTDIR\ChaosConnect.exe"
+SectionEnd
+
+Section "Run Driver Installation"
+    SetShellVarContext all
+    # run driver installation
+    Exec "$INSTDIR\driver\dpinst.exe"
+    
 SectionEnd
 
 Section "Uninstall"
