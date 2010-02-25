@@ -58,7 +58,7 @@ SectionEnd
 Section "Run Driver Installation"
     SetShellVarContext all
     # run driver installation
-    Exec "$INSTDIR\driver\dpinst.exe"
+    Exec "$INSTDIR\driver\dpinst.exe /lm"
     
 SectionEnd
 
