@@ -3,6 +3,8 @@
 Name "ChaosConnect"
 
 OutFile "install.exe"
+InstallDir "$PROGRAMFILES\ChaosConnect"
+
 RequestExecutionLevel admin
 
 !insertmacro MUI_PAGE_WELCOME
