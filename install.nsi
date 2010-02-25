@@ -1,4 +1,5 @@
 !include MUI.nsh
+!include x64.nsh
 
 Name "ChaosConnect"
 
@@ -58,7 +59,13 @@ SectionEnd
 Section "Run Driver Installation"
     SetShellVarContext all
     # run driver installation
-    Exec "$INSTDIR\driver\dpinst.exe /lm /sw"
+    ${If} ${RunningX64}
+        DetailPrint "Installing 64 bit drivers"
+        Exec "$INSTDIR\driver\dpinst_x64.exe /lm /sw"
+    ${Else}
+        DetailPrint "Installing 32 bit drivers"
+        Exec "$INSTDIR\driver\dpinst.exe /lm /sw"
+    ${EndIf}
     
 SectionEnd
 
