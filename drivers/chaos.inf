@@ -2,9 +2,6 @@
 Signature = "$Chicago$"
 provider  = %manufacturer%
 DriverVer = 07/07/2009,0.1.12.2
-CatalogFile = chaos.cat
-CatalogFile.NT = chaos.cat
-CatalogFile.NTAMD64 = chaos_x64.cat
 
 Class = LibUsbDevices
 ClassGUID = {EB781AAF-9C70-4523-A5DF-642A87ECA567}
