@@ -32,8 +32,6 @@ Section "ChaosConnect"
     File drivers\libusb0.dll
     File drivers\libusb0_x64.dll
     File drivers\chaos.inf
-    File drivers\chaos.cat
-    File drivers\chaos_x64.cat
     File drivers\dpinst.exe
     File drivers\dpinst_x64.exe
     
@@ -81,8 +79,6 @@ Section "Uninstall"
     Delete "$INSTDIR\driver\libusb0.dll"
     Delete "$INSTDIR\driver\libusb0_x64.dll"
     Delete "$INSTDIR\driver\chaos.inf"
-    Delete "$INSTDIR\driver\chaos.cat"
-    Delete "$INSTDIR\driver\chaos_x64.cat"
     Delete "$INSTDIR\driver\dpinst.exe"
     Delete "$INSTDIR\driver\dpinst_x64.exe"
     Delete "$INSTDIR\driver\*.*"
