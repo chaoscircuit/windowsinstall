@@ -6,6 +6,8 @@ Name "ChaosConnect"
 OutFile "install.exe"
 InstallDir "$PROGRAMFILES\ChaosConnect"
 
+SetCompressor /SOLID lzma
+
 RequestExecutionLevel admin
 
 !insertmacro MUI_PAGE_WELCOME
