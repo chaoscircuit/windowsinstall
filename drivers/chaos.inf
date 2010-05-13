@@ -116,13 +116,13 @@ ServiceBinary  = %12%\libusb0.sys
 ;--------------------------------------------------------------------------
 
 [Devices]
-"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_0945&PID_7777
+"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_04D8&PID_FC47
 
 [Devices.NT]
-"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_0945&PID_7777
+"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_04D8&PID_FC47
 
 [Devices.NTAMD64]
-"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_0945&PID_7777
+"Chaos Circuit 2.0"=LIBUSB_DEV, USB\VID_04D8&PID_FC47
 
 
 ;--------------------------------------------------------------------------
